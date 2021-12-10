@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home: Diseño & Programación</title>
+	<!-- Favicon -->
+	<link rel="icon" href="assets/images/images-princ/fav.png">
+	<!-- Css Local -->
+	<link rel="stylesheet" href="/assets/css/mainContact.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Fixed Nav -->
+	{{> header}}
+	<!-- Fixed-Nav End -->
+	
+	<!-- Formulario -->
+	<section class="container d-flex justify-content-center">
+	<form action="/send-email" method="post">
+        <div class="form">
+            <h1>CONTACTANOS</h1>
+            <div class="grupo">
+                <input type="text" name="nombre" id="" required><span class="barra"></span>
+                <label>NOMBRE:</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="apellido" id="" required><span class="barra"></span>
+                <label>APELLIDO:</label>
+            </div>
+            <div class="grupo">
+                <input type="email" name="email" id="" required><span class="barra"></span>
+                <label>CORREO ELECTRONICO:</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="asunto" id="" required><span class="barra"></span>
+                <label>¿DE DONDE NOS ESCRIBES?</label>
+            </div>
+            <!-- <div class="grupo">
+                <input type="number" name="" id="" required><span class="barra"></span>
+                <label>Edad</label>
+            </div> -->
+            <div class="grupo">
+                <textarea name="mensaje" id="" rows="3" required></textarea><span class="barra"></span>
+                <label>ESCRIBE TU MENSAJE:</label>
+            </div>
+            <button class="button-enviar" type="submit">ENVIAR</button>
+        </div>
+    </form>
+	</section>
+
+
+</body>
+
+<!-- Script Local -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/00505edc71.js" crossorigin="anonymous"></script>
+</html>

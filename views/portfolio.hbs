@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home: Diseño & Programación</title>
+	<!-- Favicon -->
+	<link rel="icon" href="/assets/images/images-princ/fav.png">
+	<!-- Css Local -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Fixed Nav -->
+	{{> header}}
+	<!-- Fixed-Nav End -->
+
+	<!-- 1 Sección -->
+	<main>
+		<section class="headerPortf col-sm-12" style="background-image: url(/assets/images/images-portfo/portfolio-img.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>PORTFOLIO</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- 2 Sección -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<section class="presentationPortf mt-4">
+					<img src="/assets/images/images-portfo/present-portf.jpg" class="portfolPicture" alt="PresentaciónInicial">
+						<h2 class="subTitleportf">¿Qué es un Portafolio?</h2>
+						<p class="presentationPortf mb-2">Un Portafolio consiste en dar a conocer visiblemente los trabajos o proyectos realizados por los Diseñadores Web, las páginas relizadas por ellos después de estudiar y precticar, para así crear Sitios Web.</p>	
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- Section BD- 4 -->
+	{{> forms}}
+
+	<!-- 3 Section -->
+	<section class="projects mb-3">
+		<div class="container">
+			<h2 class="subTitleportf text-center pt-3">Ejemplos de algunos Proyectos realizados</h2>
+			<div class="projects__grid">
+				<article class="projects__item">
+					<img src="/assets/images/images-portfo/portf-1.jpg" class="projects__img">
+					<div class="projects__hover">
+						<h2 class="projects-title">VIEW</h2>
+						<i class="far fa-clipboard projects__icon"></i>
+					</div>
+				</article>
+
+				<article class="projects__item">
+					<img src="/assets/images/images-portfo/portf-2.jpg" class="projects__img">
+					<div class="projects__hover">
+						<h2 class="projects-title">VIEW</h2>
+						<i class="far fa-clipboard projects__icon"></i>
+					</div>
+				</article>
+
+				<article class="projects__item">
+					<img src="/assets/images/images-portfo/portf-3.jpg" class="projects__img">
+					<div class="projects__hover">
+						<h2 class="projects-title">VIEW</h2>
+						<i class="far fa-clipboard projects__icon"></i>
+					</div>
+				</article>
+
+				<article class="projects__item">
+					<img src="/assets/images/images-portfo/portf-4.jpg" class="projects__img">
+					<div class="projects__hover">
+						<h2 class="projects-title">VIEW</h2>
+						<i class="far fa-clipboard projects__icon"></i>
+					</div>
+				</article>
+
+				<article class="projects__item">
+					<img src="/assets/images/images-portfo/portf-5.jpg" class="projects__img">
+					<div class="projects__hover">
+						<h2 class="projects-title">VIEW</h2>
+						<i class="far fa-clipboard projects__icon"></i>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+	</main>
+
+	<!-- Footer -->
+	{{> footer}}
+</html>

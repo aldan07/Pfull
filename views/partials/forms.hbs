@@ -1,0 +1,113 @@
+	<div class="container p-4">
+        <h2 class="presentationPortf h1 text-center font-weight-bold">LISTADO DE DATOS</h2>
+        <button class="btn btn-primary presentationBtn btn-lg" data-toggle="modal" data-target="#myModalAdd">Añadir</button>
+    <table class="table table-striped" id="mytable">
+            <thead>
+                <th class="subTitleportf h5 "> ID WEBDEVELOPMENT</th>
+                <th class="subTitleportf h5 "> NOMBRE</th>
+                <th class="subTitleportf h5 "> EDAD</th>
+                <th class="subTitleportf h5 "> PROFESION</th>
+            </thead>
+            <tbody>
+                {{#each results}}
+                    <tr>
+                        <td> {{ id_webdelevop }}</td>
+                        <td> {{ Nombre }}</td>
+                        <td> {{ Edad }}</td>
+						<td> {{ Profesion }}</td>
+        
+                            <td><a href="javascript:void(0);" class="btn btn-warning subTitleportf edit" data-id="{{ id_webdelevop }}" data-Nombre="{{ Nombre }}" data-Edad="{{ Edad }}" data-Profesion="{{ Profesion }}">EDITAR</a>    
+                            <a href="javascript:void(0);" class="btn btn-dark subTitleportf delete" data-id="{{ id_webdelevop }}"> BORRAR</a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+	{{!-- Modal para agregar productos --}}
+    <form action="/save" method="post">
+        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title presentationPortf" id="exampleModalLabel">¿ERES FRONT-END O BACK-END, O.....?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                	<div class="modal-body">
+                    	<div class="form-group">
+                    	<input type="text" name="Nombre" class="form-control subTitleportf" placeholder="NOMBRE" required>
+                		</div>
+                		<div class="form-group">
+                    	<input type="text" name="Edad" class="form-control subTitleportf" placeholder="EDAD" required>
+                		</div>
+                		<div class="form-group">
+                   	 	<input type="text" name="Profesion" class="form-control subTitleportf" placeholder="PROFESION" required>
+                		</div>
+                		</div>
+                    	<div class="modal-footer">
+                        	<button type="button" class="btn btn-dark" data-dismiss="modal">CERRAR</button>
+                       		<button type="submit" class="btn btn-warning">GUARDAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+	{{!-- Editar --}}
+    <form action="/update" method="post">
+        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center presentationPortf h1" id="exampleModalLabel">EDITAR</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="Nombre" class="form-control nombre subTitleportf" placeholder="NOMBRE" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Edad" class="form-control edad subTitleportf" placeholder="EDAD" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Profesion" class="form-control profesion subTitleportf" placeholder="PROFESION" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id" class="id_webdelevop">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                    <button type="submit" class="btn btn-success">ACTUALIZAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {{!-- Eliminar --}}
+    <form id="add-row-from" action="/delete" method="post">
+        <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center presentationPortf h3" id="exampleModalLabel">ELIMINAR DATO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                    <div class="modal-body">
+                        <strong class="subTitleportf h5 text-center">¿QUIERES ELIMINAR TUS DATOS?</strong>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id_webdelevop" class="id_webdelevop2" required>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                    <button type="submit" class="btn btn-dark">ELIMINAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
